@@ -1,0 +1,136 @@
+.form {
+}
+
+.form__field {
+}
+
+.form__label {
+	display: block;
+	margin-bottom: 4px;
+
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+	color: $secondary-text-color;
+}
+
+.input-wrapper {
+	position: relative;
+}
+
+.form__input {
+	display: block;
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-left: 42px;
+	margin-bottom: 10px;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+
+	&:hover,
+	&:focus {
+		border-color: $accent-color;
+	}
+}
+
+.form__icon {
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+
+	transition: fill 250ms $timing-function;
+
+	.input-wrapper:focus-within &,
+	.form__input:hover + & {
+		fill: $accent-color;
+	}
+}
+
+.form__comment-field {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.form__textarea {
+	resize: none;
+	display: block;
+	width: 100%;
+	height: 120px;
+	padding: 12px 16px;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+
+	&:hover,
+	&:focus {
+		border-color: $accent-color;
+	}
+}
+
+.form__policy-field {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+
+	cursor: pointer;
+}
+
+.form__checkbox {
+	appearance: none;
+}
+
+.form__checkbox-icon {
+	display: inline-block;
+	margin-right: 7px;
+
+	border: 2px solid $primary-text-color;
+	border-radius: 2px;
+
+	/* .form__checkbox:hover + & {
+		border-color: $accent-color;
+	} */
+	.form__checkbox:checked + & {
+		border: none;
+		background-color: $accent-color;
+	}
+}
+
+.form__policy {
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+
+	color: $secondary-text-color;
+}
+
+.form__policy-link {
+	text-decoration: underline;
+	color: $accent-color;
+}
+
+.form__submit {
+	display: block;
+	padding: 10px 52px;
+	margin-left: auto;
+	margin-right: auto;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 0.06em;
+
+	color: $tertiary-text-color;
+	background-color: $accent-color;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+
+	transition: background-color 250ms $timing-function;
+
+	&:hover,
+	&:focus {
+		background-color: $btn-accent-color;
+	}
+}

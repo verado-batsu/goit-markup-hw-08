@@ -1,0 +1,50 @@
+.example {
+	padding-bottom: 94px;
+
+	background-color: $primary-bg-color;
+}
+
+.example__title {
+	margin-bottom: 50px;
+
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: $primary-text-color;
+}
+
+.example__list {
+	display: flex;
+	gap: 30px;
+}
+
+.example__item {
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		height: 70px;
+		width: 100%;
+
+		background-color: rgba(47, 48, 58, 0.8);
+	}
+}
+
+.example__name {
+	position: absolute;
+	bottom: 27px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	font-weight: 700;
+	line-height: 16px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: $tertiary-text-color;
+}

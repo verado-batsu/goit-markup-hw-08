@@ -1,0 +1,45 @@
+.footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	background-color: $secondary-bg-color;
+}
+
+.footer__container {
+	display: flex;
+	align-items: baseline;
+}
+
+.footer-contacts {
+	margin-right: 70px;
+}
+
+.footer__logo {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.address {
+	font-style: normal;
+}
+
+.address-list {
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+}
+
+.address__item:not(:last-child) {
+	margin-bottom: 9px;
+}
+
+.address__map-link {
+	color: $tertiary-text-color;
+}
+
+.address__link {
+	color: $footer-color;
+}
+
+@import "./footer-social";
+
+@import "./footer-form";

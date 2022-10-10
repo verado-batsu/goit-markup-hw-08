@@ -6,17 +6,25 @@
 }
 
 .footer__container {
-	display: flex;
-	align-items: baseline;
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		align-items: baseline;
+	}
 }
 
 .footer-contacts {
-	margin-right: 70px;
+	@media screen and (min-width: 1200px) {
+		margin-right: 70px;
+	}
 }
 
 .footer__logo {
 	display: inline-block;
 	margin-bottom: 20px;
+
+	@media screen and (max-width: 1200px) {
+		@include font-line(24px, 28px);
+	}
 }
 
 .address {
@@ -29,7 +37,9 @@
 }
 
 .address__item:not(:last-child) {
-	margin-bottom: 9px;
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 9px;
+	}
 }
 
 .address__map-link {

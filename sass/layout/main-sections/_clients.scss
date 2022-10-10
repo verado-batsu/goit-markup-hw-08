@@ -1,14 +1,18 @@
 .clients {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	@media screen and (min-width: 1200px) {
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
 }
 
 .clients__title {
-	margin-bottom: 50px;
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+		font-size: 36px;
+		line-height: 1.16;
+	}
 
 	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.16;
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: $primary-text-color;
@@ -16,18 +20,26 @@
 
 .clients__list {
 	display: flex;
-	/* flex-wrap: wrap; */
 	gap: 30px;
+
+	@media screen and (max-width: 1200px) {
+		flex-wrap: wrap;
+	}
 }
 
 .clients__item {
-	flex-basis: calc((100% - 150px) / 6);
+	@media screen and (min-width: 1200px) {
+		flex-basis: calc((100% - 150px) / 6);
+	}
 }
 
 .clients__link {
 	display: block;
 	color: $primary-svg-color;
-	padding: 16px 32px;
+
+	@media screen and (min-width: 1200px) {
+		padding: 16px 32px;
+	}
 
 	border: 1px solid $primary-svg-color;
 	border-radius: 4px;

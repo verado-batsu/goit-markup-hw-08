@@ -180,11 +180,9 @@ body {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .header__logo {
-    font-size: 24px;
-    line-height: 1.1666666667;
-  }
+.header__logo {
+  display: inline-block;
+  padding: 16px 0;
 }
 @media screen and (min-width: 1200px) {
   .header__logo {
@@ -193,7 +191,18 @@ body {
     padding-bottom: 25px;
   }
 }
+@media screen and (max-width: 1200px) {
+  .header__logo {
+    font-size: 24px;
+    line-height: 1.1666666667;
+  }
+}
 
+@media screen and (max-width: 767px) {
+  .nav__list {
+    display: none;
+  }
+}
 @media screen and (min-width: 1200px) {
   .nav__list {
     display: -webkit-box;
@@ -236,6 +245,11 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: none;
+  }
+}
 @media screen and (min-width: 1200px) {
   .contacts {
     display: -webkit-box;

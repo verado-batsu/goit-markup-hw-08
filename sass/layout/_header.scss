@@ -21,18 +21,25 @@
 }
 
 .header__logo {
-	@media screen and (max-width: 1200px) {
-		@include font-line(24px, 28px);
-	}
+	display: inline-block;
+	padding: 16px 0;
 
 	@media screen and (min-width: 1200px) {
 		margin-right: 93px;
 		padding-top: 24px;
 		padding-bottom: 25px;
 	}
+
+	@media screen and (max-width: 1200px) {
+		@include font-line(24px, 28px);
+	}
 }
 
 .nav__list {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
 	@media screen and (min-width: 1200px) {
 		display: flex;
 		gap: 50px;
@@ -75,6 +82,10 @@
 }
 
 .contacts {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
 	@media screen and (min-width: 1200px) {
 		display: flex;
 		gap: 50px;

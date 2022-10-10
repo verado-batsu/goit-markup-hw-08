@@ -6,6 +6,10 @@
 }
 
 .footer__container {
+	@media screen and (max-width: 767px) {
+		text-align: center;
+	}
+
 	@media screen and (min-width: 1200px) {
 		display: flex;
 		align-items: baseline;
@@ -28,6 +32,10 @@
 }
 
 .address {
+	@media screen and (max-width: 767px) {
+		margin-bottom: 60px;
+	}
+
 	font-style: normal;
 }
 
@@ -37,6 +45,8 @@
 }
 
 .address__item:not(:last-child) {
+	margin-bottom: 8px;
+
 	@media screen and (min-width: 1200px) {
 		margin-bottom: 9px;
 	}

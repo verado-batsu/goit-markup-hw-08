@@ -21,6 +21,9 @@
 }
 
 .footer-form__input {
+	width: 450px;
+	margin-bottom: 20px;
+
 	@media screen and (min-width: 1200px) {
 		width: 358px;
 		margin-right: 12px;
@@ -36,6 +39,8 @@
 	border-radius: 4px;
 
 	&::placeholder {
+		@include font-line(16px, 20px);
+		letter-spacing: 0.03em;
 		color: $footer-color;
 	}
 }
@@ -44,6 +49,10 @@
 	display: flex;
 	align-items: center;
 	padding: 10px 28px;
+
+	@media screen and (max-width: 1200px) {
+		margin: 0 auto;
+	}
 
 	@media screen and (max-width: 767px) {
 		padding-left: 31px;
@@ -62,6 +71,8 @@
 }
 
 .footer-form__span {
+	margin-right: 12px;
+
 	@media screen and (min-width: 1200px) {
 		margin-right: 10px;
 	}

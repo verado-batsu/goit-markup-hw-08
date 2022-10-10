@@ -1,10 +1,12 @@
 .benefits {
-	background-color: $primary-bg-color;
+	padding: 60px 0;
 
 	@media screen and (min-width: 1200px) {
 		padding-top: 94px;
 		padding-bottom: 94px;
 	}
+
+	background-color: $primary-bg-color;
 }
 
 .benefits__list {
@@ -25,6 +27,7 @@
 
 .benefits__thumb {
 	display: flex;
+	padding: 25px 190px;
 	margin-bottom: 30px;
 
 	@media screen and (min-width: 1200px) {
@@ -45,9 +48,17 @@
 	line-height: 1.14;
 	text-transform: uppercase;
 	color: $primary-text-color;
+
+	@media screen and (max-width: 767px) {
+		text-align: center;
+	}
 }
 
 .benefits__descrpt {
+	@media screen and (max-width: 767px) {
+		margin-bottom: 30px;
+	}
+
 	line-height: 1.71;
 	color: $secondary-text-color;
 }

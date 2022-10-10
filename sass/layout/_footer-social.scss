@@ -1,4 +1,9 @@
 .footer-social {
+	@media screen and (max-width: 767px) {
+		width: 206px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+	}
 }
 
 .footer-social__title {
@@ -21,7 +26,7 @@
 }
 
 .footer-social__link {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	padding: 12px;
 

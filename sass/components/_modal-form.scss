@@ -85,14 +85,11 @@
 
 .form__checkbox-icon {
 	display: inline-block;
-	margin-right: 7px;
+	margin-right: 8px;
 
 	border: 2px solid $primary-text-color;
 	border-radius: 2px;
 
-	/* .form__checkbox:hover + & {
-		border-color: $accent-color;
-	} */
 	.form__checkbox:checked + & {
 		border: none;
 		background-color: $accent-color;
@@ -104,6 +101,12 @@
 	letter-spacing: 0.03em;
 
 	color: $secondary-text-color;
+}
+
+.form__policy-text {
+	@media screen and (max-width: 1200px) {
+		@include font-line(12px, 14px);
+	}
 }
 
 .form__policy-link {
@@ -118,8 +121,7 @@
 	margin-right: auto;
 
 	font-weight: 700;
-	font-size: 16px;
-	line-height: 30px;
+	@include font-line(16px, 30px);
 	letter-spacing: 0.06em;
 
 	color: $tertiary-text-color;

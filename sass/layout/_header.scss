@@ -9,6 +9,9 @@
 }
 
 .header__container {
+}
+
+.menu {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -17,6 +20,14 @@
 .header__logo {
 	display: inline-block;
 	padding: 16px 0;
+
+	@media screen and (max-width: 767px) {
+		.menu__button--is-open & {
+			opacity: 0;
+			pointer-events: none;
+			visibility: hidden;
+		}
+	}
 
 	@media screen and (max-width: 1200px) {
 		@include font-line(24px, 28px);
@@ -29,21 +40,28 @@
 	}
 }
 
-.menu {
-}
-
 .menu__button {
 	display: inline-flex;
 	background-color: transparent;
 
+	transition: color 250ms $timing-function;
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+
 	.icon-cross {
 		display: none;
+
+		fill: currentColor;
 	}
 	&--is-open .icon-cross {
 		display: block;
 	}
 
 	.icon-menu {
+		fill: currentColor;
 	}
 	&--is-open .icon-menu {
 		display: none;
@@ -60,7 +78,7 @@
 		top: 100%;
 		left: 0;
 		width: 100%;
-		height: 796px;
+		height: 736px;
 		display: none;
 
 		.menu__button--is-open & {
@@ -76,6 +94,11 @@
 }
 
 .nav {
+	@media screen and (max-width: 767px) {
+		margin-left: 40px;
+		margin-bottom: 306px;
+	}
+
 	@media screen and (min-width: 1200px) {
 		margin-right: 315px;
 	}
@@ -89,6 +112,12 @@
 }
 
 .nav__item {
+	@media screen and (max-width: 767px) {
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+
 	@media screen and (min-width: 1200px) {
 		position: relative;
 	}
@@ -130,6 +159,15 @@
 }
 
 .contacts {
+	@media screen and (max-width: 767px) {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+
+		margin-left: 40px;
+		margin-bottom: 64px;
+	}
+
 	@media screen and (min-width: 1200px) {
 		display: flex;
 		gap: 30px;
@@ -137,6 +175,21 @@
 }
 
 .contacts__item {
+	@media screen and (max-width: 767px) {
+		&:not(:last-child) {
+			order: 1;
+		}
+
+		font-weight: 500;
+		letter-spacing: 0.02em;
+
+		&:first-child {
+			@include font-line(24px, 28px);
+		}
+		&:last-child {
+			@include font-line(34px, 40px);
+		}
+	}
 }
 
 .contacts__link {
@@ -153,7 +206,57 @@
 .contacts__icon {
 	fill: currentColor;
 
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
 	@media screen and (min-width: 1200px) {
 		margin-right: 10px;
+	}
+}
+
+.header-social {
+	display: flex;
+
+	margin-left: 40px;
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+
+.header-social__item {
+	display: flex;
+	align-items: center;
+
+	@media screen and (max-width: 420px) {
+		display: none;
+	}
+
+	&:not(:last-child)::after {
+		content: "";
+		width: 22px;
+		height: 1px;
+
+		background-color: rgba(33, 33, 33, 0.2);
+		transform: rotate(90deg);
+	}
+}
+
+.header-social__link {
+	font-weight: 500;
+	@include font-line(18px, 22px);
+	letter-spacing: 0.02em;
+	color: $accent-color;
+
+	&:not(:last-child) {
+		margin-right: 10px;
+	}
+	&:not(:first-child) {
+		margin-left: 10px;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
 	}
 }

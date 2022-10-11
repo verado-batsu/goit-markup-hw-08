@@ -27,8 +27,11 @@
 
 .benefits__thumb {
 	display: flex;
-	padding: 25px 190px;
+	justify-content: center;
 	margin-bottom: 30px;
+
+	padding: 25px 0;
+	max-width: 450px;
 
 	@media screen and (min-width: 1200px) {
 		padding: 25px 100px;

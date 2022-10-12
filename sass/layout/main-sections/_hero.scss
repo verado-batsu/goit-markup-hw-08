@@ -28,6 +28,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 30px;
+
 	@media screen and (max-width: 767px) {
 		padding: 0 15px;
 	}
@@ -37,6 +38,10 @@
 	@include font-line(26px, 42px);
 	text-transform: uppercase;
 	color: $tertiary-text-color;
+
+	@media screen and (min-width: 768px) {
+		max-width: 360px;
+	}
 
 	@media screen and (min-width: 1200px) {
 		max-width: 696px;

@@ -12,6 +12,10 @@
 		padding: 93px 15px;
 	}
 
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		padding: 208px 159px;
+	}
+
 	background-color: rgba(0, 0, 0, 0.2);
 	opacity: 1;
 	transition: opacity 250ms $timing-function, visibility 250ms $timing-function;
@@ -27,13 +31,11 @@
 	position: relative;
 	padding: 40px;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 1200px) {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-	}
 
-	@media screen and (min-width: 1200px) {
 		min-height: 581px;
 		min-width: 528px;
 
@@ -85,6 +87,10 @@
 	line-height: 1.15;
 	letter-spacing: 0.03em;
 	color: $primary-text-color;
+
+	@media screen and (max-width: 1199px) {
+		@include font-line(20px, 30px);
+	}
 }
 
 @import "../components/modal-form";

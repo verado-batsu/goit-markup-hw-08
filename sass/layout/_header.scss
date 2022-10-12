@@ -228,9 +228,9 @@
 	display: flex;
 	align-items: center;
 
-	@media screen and (max-width: 420px) {
-		display: none;
-	}
+	// @media screen and (max-width: 420px) {
+	// 	display: none;
+	// }
 
 	&:not(:last-child)::after {
 		content: "";
@@ -239,6 +239,15 @@
 
 		background-color: rgba(33, 33, 33, 0.2);
 		transform: rotate(90deg);
+	}
+
+	@media screen and (max-width: 420px) {
+		&:not(:last-child)::after {
+			display: none;
+		}
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
 	}
 }
 

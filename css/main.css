@@ -410,11 +410,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 420px) {
-  .header-social__item {
-    display: none;
-  }
-}
 .header-social__item:not(:last-child)::after {
   content: "";
   width: 22px;
@@ -422,6 +417,14 @@ body {
   background-color: rgba(33, 33, 33, 0.2);
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+@media screen and (max-width: 420px) {
+  .header-social__item:not(:last-child)::after {
+    display: none;
+  }
+  .header-social__item:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .header-social__link {

@@ -11,8 +11,20 @@
 
 	background: rgba(47, 48, 58, 0.4);
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-		url(../images/hero/overlay.jpg);
+		image-set("/images/hero/overlay-mobile.jpg" 1x, "/images/hero/overlay-mobile@2x.jpg" 2x);
 	background-color: $secondary-bg-color;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@media screen and (min-width: 768px) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			image-set("/images/hero/overlay-tablet.jpg" 1x, "/images/hero/overlay-tablet@2x.jpg" 2x);
+	}
+
+	@media screen and (min-width: 1200px) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			image-set("/images/hero/overlay.jpg" 1x, "/images/hero/overlay@2x.jpg" 2x);
+	}
 }
 
 .hero {
@@ -28,20 +40,13 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 30px;
-
-	@media screen and (max-width: 767px) {
-		padding: 0 15px;
-	}
+	max-width: 360px;
 
 	font-weight: 900;
 	letter-spacing: 0.06em;
 	@include font-line(26px, 42px);
 	text-transform: uppercase;
 	color: $tertiary-text-color;
-
-	@media screen and (min-width: 768px) {
-		max-width: 360px;
-	}
 
 	@media screen and (min-width: 1200px) {
 		max-width: 696px;

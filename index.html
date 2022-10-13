@@ -55,12 +55,18 @@
 								<svg class="contacts__icon" width="16" height="12">
 									<use href="./images/icons.svg#icon-envelope"></use>
 								</svg>
+								<svg class="contacts__icon icon-envelope" width="14" height="10">
+									<use href="./images/icons.svg#icon-envelope"></use>
+								</svg>
 								info@devstudio.com
 							</a>
 						</li>
 						<li class="contacts__item">
 							<a class="contacts__link link" href="tel:+380961111111">
 								<svg class="contacts__icon" width="10" height="16">
+									<use href="./images/icons.svg#icon-smartphone"></use>
+								</svg>
+								<svg class="contacts__icon icon-smartphone" width="10" height="14">
 									<use href="./images/icons.svg#icon-smartphone"></use>
 								</svg>
 								+38 096 111 11 11
@@ -151,18 +157,18 @@
 				<h2 class="example__title">Чим ми займаємося</h2>
 				<ul class="example__list">
 					<li class="example__item">
-						<img class="example__img" src="./images/example/box1.jpg" alt="Чоловік пише алгоритм у коді"
-							width="370">
+						<img srcset="./images/example/box1.jpg 1x, ./images/example/box1@2x.jpg 2x" class="example__img"
+							src="./images/example/box1.jpg" alt="Чоловік пише алгоритм у коді" width="370">
 						<h3 class="example__name">Десктопні додатки</h3>
 					</li>
 					<li class="example__item">
-						<img class="example__img" src="./images/example/box2.jpg" alt="Жінка тримає смартфон"
-							width="370">
+						<img srcset="./images/example/box2.jpg 1x, ./images/example/box2@2x.jpg 2x" class="example__img"
+							src="./images/example/box2.jpg" alt="Жінка тримає смартфон" width="370">
 						<h3 class="example__name">Мобільні додатки</h3>
 					</li>
 					<li class="example__item">
-						<img class="example__img" src="./images/example/box3.jpg"
-							alt="Жінка рисує на графічному планшеті" width="370">
+						<img srcset="./images/example/box3.jpg 1x, ./images/example/box3@2x.jpg 2x" class="example__img"
+							src="./images/example/box3.jpg" alt="Жінка рисує на графічному планшеті" width="370">
 						<h3 class="example__name">Дизайнерські рішення</h3>
 					</li>
 				</ul>
@@ -175,8 +181,15 @@
 				<ul class="team__list">
 					<li class="team__item">
 						<div class="member">
-							<img class="member__img" src="./images/team/member1.jpg"
-								alt="Чоловік в окулярах та в сорочці посміхається" width="270">
+							<picture>
+								<source
+									srcset="./images/team/member1-mobile.jpg 1x, ./images/team/member1-mobile@2x.jpg 2x"
+									media="(max-width: 1199px)" type="image/jpg">
+
+								<img srcset="./images/team/member1.jpg 1x,
+								./images/team/member1@2x.jpg 2x" class="member__img" src="./images/team/member1.jpg"
+									alt="Чоловік в окулярах та в сорочці посміхається">
+							</picture>
 							<div class="member__info">
 								<h3 class="member__name">Ігор Дем'яненко</h3>
 								<p class="member__position" lang="en">Product Designer</p>
@@ -215,8 +228,15 @@
 					</li>
 					<li class="team__item">
 						<div class="member">
-							<img class="member__img" src="./images/team/member2.jpg"
-								alt="Жінка в окулярах та в піджаку посміхається" width="270">
+							<picture>
+								<source
+									srcset="./images/team/member2-mobile.jpg 1x, ./images/team/member2-mobile@2x.jpg 2x"
+									media="(max-width: 1199px)" type="image/jpg">
+
+								<img srcset="./images/team/member2.jpg 1x, ./images/team/member2@2x.jpg 2x"
+									class="member__img" src="./images/team/member2.jpg"
+									alt="Жінка в окулярах та в піджаку посміхається">
+							</picture>
 							<div class="member__info">
 								<h3 class="member__name">Ольга Рєпіна</h3>
 								<p class="member__position" lang="en">Frontend Developer</p>
@@ -255,8 +275,15 @@
 					</li>
 					<li class="team__item">
 						<div class="member">
-							<img class="member__img" src="./images/team/member3.jpg"
-								alt="Чоловік в сорочці, дивлячись на світло, посміхається" width="270">
+							<picture>
+								<source
+									srcset="./images/team/member3-mobile.jpg 1x, ./images/team/member3-mobile@2x.jpg 2x"
+									media="(max-width: 1199px)" type="image/jpg">
+
+								<img srcset="./images/team/member3.jpg 1x, ./images/team/member3@2x.jpg 2x"
+									class="member__img" src="./images/team/member3.jpg"
+									alt="Чоловік в сорочці, дивлячись на світло, посміхається">
+							</picture>
 							<div class="member__info">
 								<h3 class="member__name">Микола Тарасов</h3>
 								<p class="member__position" lang="en">Marketing</p>
@@ -295,8 +322,15 @@
 					</li>
 					<li class="team__item">
 						<div class="member">
-							<img class="member__img" src="./images/team/member4.jpg"
-								alt="Чоловік в окулярах та в футболці посміхається" width="270">
+							<picture>
+								<source
+									srcset="./images/team/member4-mobile.jpg 1x, ./images/team/member4-mobile@2x.jpg 2x"
+									media="(max-width: 1199px)" type="image/jpg">
+
+								<img srcset="./images/team/member4.jpg 1x, ./images/team/member4@2x.jpg 2x"
+									class="member__img" src="./images/team/member4.jpg"
+									alt="Чоловік в окулярах та в футболці посміхається">
+							</picture>
 							<div class="member__info">
 								<h3 class="member__name">Михайло Єрмаков</h3>
 								<p class="member__position" lang="en">UI Designer</p>

@@ -83,6 +83,10 @@
 	line-height: 1.55;
 	letter-spacing: 0.03em;
 	color: $tertiary-text-color;
+
+	@media screen and (max-width: 350px) {
+		@include font-line($line-height: 21px);
+	}
 }
 
 .cards-wrapper {

@@ -491,13 +491,15 @@ body {
 
 .overlay-hero {
   height: 400px;
+  margin-left: auto;
+  margin-right: auto;
   background: rgba(47, 48, 58, 0.4);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), image-set("../images/hero/overlay-mobile.jpg" 1x, "../images/hero/overlay-mobile@2x.jpg" 2x);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url("../images/hero/overlay-mobile.jpg") 1x, url("../images/hero/overlay-mobile@2x.jpg") 2x);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), image-set("../images/hero/overlay-mobile.jpg" 1x, "../images/hero/overlay-mobile@2x.jpg" 2x);
   background-color: #2f303a;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), image-set("../images/hero/overlay-mobile.jpg" 1x, "../images/hero/overlay-mobile@2x.jpg" 2x);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url("../images/hero/overlay-mobile.jpg") 1x, url("../images/hero/overlay-mobile@2x.jpg") 2x);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), image-set("../images/hero/overlay-mobile.jpg" 1x, "../images/hero/overlay-mobile@2x.jpg" 2x);
 }
 @media screen and (min-width: 1200px) {
   .overlay-hero {
